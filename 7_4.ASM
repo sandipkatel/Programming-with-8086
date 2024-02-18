@@ -1,0 +1,15 @@
+TITLE PROGRAM TO ADD FOUR 8 BIT NUMS
+.MODEL SMALL
+.STACK 32
+.CODE
+MAIN PROC FAR
+        MOV BX, 0200H
+        MOV CX, 0004H
+        MOV AL, 00H
+   NEXT:
+        ADD AL, [BX]
+        INC BX
+        LOOP NEXT
+        MOV [BX], AL
+MAIN ENDP
+END

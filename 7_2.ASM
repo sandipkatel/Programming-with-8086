@@ -1,0 +1,16 @@
+PAGE 30, 100
+TITLE PROGRAM TO ADD TWO 8 BIT NUMS AND STORE
+.MODEL SMALL
+.STACK 32
+.CODE
+MAIN PROC FAR
+        MOV BX, 0300H
+        MOV [BX], 0011H
+        MOV [BX+02], 0022H
+        MOV AL, [BX]
+        ADD AL, [BX + 02]
+        MOV [BX + 04], AL
+        MOV AH, 4CH
+        INT 21H
+MAIN ENDP
+END
